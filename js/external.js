@@ -31,17 +31,17 @@ if (classSchedule === false && scheduleConflict === false){
 
 //exercise 3.1
 const googleHours = Number(prompt("How many hours did you work for Google?"));
-const googleRate = 400;
-const googlePay = googleHours * googleRate;
+const googleDollarRate = 400;
+const googlePay = googleHours * googleDollarRate;
 //console.log(googlePay);
 
 const amazonHours = Number(prompt("How many hours did you work for Amazon?"));
-const amazonRate = 380;
-const amazonPay = amazonHours * amazonRate;
+const amazonDollarRate = 380;
+const amazonPay = amazonHours * amazonDollarRate;
 
 const faceBookHours = Number(prompt("How many hours did you work for FaceBook?"));
-const faceBookRate = 350;
-const faceBookPay = faceBookHours * faceBookRate;
+const faceBookDollarRate = 350;
+const faceBookPay = faceBookHours * faceBookDollarRate;
 
 alert("Your total paycheck comes out to $" + (googlePay + amazonPay + faceBookPay));
 
@@ -51,6 +51,8 @@ const mermaidRental = Number(prompt("How many days did you rent the little merma
 const brotherBearRental = Number(prompt("How many days did you rent brother bear?"));
 const herculesRental = Number(prompt("How many days did you rent hercules?"));
 
-const movieRentalCost = (mermaidRental + brotherBearRental + herculesRental) * 3;
+const dollarPerDay = 3;
+
+const totalMovieRentalCost = (mermaidRental + brotherBearRental + herculesRental) * dollarPerDay;
 // console.log(movieRentalCost);
-alert("Your total rental bill comes out to $" + movieRentalCost);
+alert("Your total rental bill comes out to $" + totalMovieRentalCost);
