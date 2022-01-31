@@ -5,7 +5,7 @@ const favColor = prompt("What is your favorite color?");
 alert(favColor + " is my favorite color too!");
 
 
-//exercise 3.4
+//exercise 3.3
 itemsBought = Number(prompt("How many items are you purchasing?"));
 const premiumMember = confirm("Are you a premium member?");
 
@@ -18,7 +18,7 @@ if (offerExpired === false && (itemsBought >= 2 || premiumMember === true)){
 }
 
 
-//exercise 3.3
+//exercise 3.2
 const classSchedule = confirm("Is your class schedule full?");
 const scheduleConflict = confirm("Does this class conflict with your current schedule?");
 
@@ -29,7 +29,7 @@ if (classSchedule === false && scheduleConflict === false){
 }
 
 
-//exercise 3.2
+//exercise 3.1
 const googleHours = Number(prompt("How many hours did you work for Google?"));
 const googleRate = 400;
 const googlePay = googleHours * googleRate;
@@ -43,10 +43,10 @@ const faceBookHours = Number(prompt("How many hours did you work for FaceBook?")
 const faceBookRate = 400;
 const faceBookPay = faceBookHours * faceBookRate;
 
-alert(googlePay + amazonPay + faceBookPay);
+alert("Your total paycheck comes out to $" + (googlePay + amazonPay + faceBookPay));
 
 
-//exercise 3.1
+//exercise 3.0
 const mermaidRental = Number(prompt("How many days did you rent the little mermaid?"));
 const brotherBearRental = Number(prompt("How many days did you rent brother bear?"));
 const herculesRental = Number(prompt("How many days did you rent hercules?"));
