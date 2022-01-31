@@ -40,7 +40,7 @@ const amazonRate = 380;
 const amazonPay = amazonHours * amazonRate;
 
 const faceBookHours = Number(prompt("How many hours did you work for FaceBook?"));
-const faceBookRate = 400;
+const faceBookRate = 350;
 const faceBookPay = faceBookHours * faceBookRate;
 
 alert("Your total paycheck comes out to $" + (googlePay + amazonPay + faceBookPay));
