@@ -36,13 +36,14 @@ function getSmallerSegment(str, num) {
     return str.substring(0, num).toLowerCase();
 }
 //console.log(getSmallerSegment("Codeup", 2));
+//console.log(getSmallerSegment("Hello World", 7));
 
 function total(num1, num2) {
-    return num1 + num2;
+    return "The result of num1 + num2 is: " + (num1 + num2);
 }
-//console.log("The result of num1 + num2 is: " + total(2,4));
-//console.log("The result of num1 + num2 is: " + total(5,1));
-//console.log("The result of num1 + num2 is: " + total(10,5));
+// console.log(total(2,4));
+// console.log(total(5,1));
+// console.log(total(10,5));
 
 function doMath(op, num1, num2) {
     let cleanOp = op.toLowerCase();
