@@ -84,4 +84,3 @@ function lastA(str) {
 }
 // console.log(lastA("armada"));
 // console.log(lastA("cat"));
-
