@@ -99,3 +99,29 @@ function identity(input) {
 // console.log(identity(2));
 // console.log(identity(true));
 
+let carIsLocked = false;
+    if (carIsLocked === false) {
+        alert("Will open.");
+    } else {
+        alert("Will not open.");
+    }
+
+
+function strLength(str) {
+    if (str.length === 0) {
+        return "Empty string.";
+    } else if (str.length === 1) {
+        return "One character long.";
+    } else if (str.length === 2) {
+        return "Two character long.";
+    } else {
+        return "That's a long string";
+    }
+}
+// console.log(strLength("w"));
+// console.log(strLength( ""));
+// console.log(strLength("Narwhal"));
+
+let num = 5;
+const message = (num < 10) ? 'Num less than 10' : 'Num more than 10';
+// console.log(message);
