@@ -84,3 +84,18 @@ function lastA(str) {
 }
 // console.log(lastA("armada"));
 // console.log(lastA("cat"));
+
+function rollDice(numOfDie) {
+    let diceSides = Math.floor(Math.random() * 6) + 1;
+    return diceSides * numOfDie;
+}
+
+//console.log(rollDice(3));
+
+function identity(input) {
+    return typeof input;
+}
+// console.log(identity("hello"));
+// console.log(identity(2));
+// console.log(identity(true));
+

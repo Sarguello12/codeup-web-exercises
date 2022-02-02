@@ -12,7 +12,7 @@
 function sayHello(name) {
     return "Hello , " + name + "!";
 }
-//console.log(sayHello("Sam"));
+// console.log(sayHello("Sam"));
 
 /**
  * TODO:
@@ -23,7 +23,7 @@ function sayHello(name) {
  */
 
 let helloMessage = sayHello("Sam");
-console.log(helloMessage);
+// console.log(helloMessage);
 
 /**
  * TODO:
@@ -33,7 +33,7 @@ console.log(helloMessage);
  */
 
 let myName = "Sam";
-console.log(sayHello(myName));
+// console.log(sayHello(myName));
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
@@ -58,15 +58,11 @@ var random = Math.floor((Math.random() * 3) + 1);
  */
 
 function isTwo(num) {
-    if (num === 2) {
-        return true;
-    } else {
-        return false;
-    }
+    return num === 2;
 }
 // console.log(isTwo(2));
 // console.log(isTwo(4));
-console.log(isTwo(random));
+// console.log(isTwo(random));
 
 /**
  * TODO:
@@ -80,8 +76,9 @@ console.log(isTwo(random));
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
 
-function calculateTip(tipPercent, totalBill) {
-    let totalTip = tipPercent * totalBill;
+function calculateTip(tipPercent, totalBillDollars) {
+    let tipDecimal = tipPercent * 0.01;
+    let totalTip = tipDecimal * totalBillDollars;
     return totalTip.toFixed(2);
 }
 // console.log(calculateTip(0.20, 20), 4)
@@ -94,10 +91,9 @@ function calculateTip(tipPercent, totalBill) {
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
-
-const tipPercent = Number(prompt("How much would you like to tip?"));
-const totalBill = Number(prompt("What was your total bill?"));
-alert(calculateTip(tipPercent, totalBill));
+const totalBillDollars = Number(prompt("What was your total bill?"));
+const tipPercent = Number(prompt("What percent would you like to tip?"));
+alert("For your $" + totalBillDollars + " bill, you will want to tip $" + calculateTip(tipPercent, totalBillDollars) + "!");
 
 /**
  * TODO:
@@ -115,8 +111,9 @@ alert(calculateTip(tipPercent, totalBill));
  */
 
 function applyDiscount(preDiscountPrice, discountPercent) {
+    let discountAmount = preDiscountPrice * discountPercent;
     if (discountPercent <= 1) {
-        return preDiscountPrice - (preDiscountPrice * discountPercent);
+        return preDiscountPrice - discountAmount;
     } else if (discountPercent > 1) {
         return "Invalid discount percent!";
     }
