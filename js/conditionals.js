@@ -147,9 +147,9 @@ function calculateTotal(luckyNum, total) {
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-const luckyNumber = Math.floor(Math.random() * 6);
-const totalBill = Number(prompt("What is your total bill today?"));
-alert("Your total bill today after lucky number discount is $" + calculateTotal(luckyNumber, totalBill) + "!");
+// const luckyNumber = Math.floor(Math.random() * 6);
+// const totalBill = Number(prompt("What is your total bill today?"));
+// alert("Your total bill today after lucky number discount is $" + calculateTotal(luckyNumber, totalBill) + "!");
 
 
 /**
@@ -158,9 +158,9 @@ alert("Your total bill today after lucky number discount is $" + calculateTotal(
  * would like to enter a number. If they click 'Ok', prompt the user for a
  * number, then use 3 separate alerts to tell the user:
  *
- * - whether the number is even or odd
- * - what the number plus 100 is
- * - if the number is negative or positive
+ * - whether the number is even or odd XX
+ * - what the number plus 100 is XX
+ * - if the number is negative or positive XX
  *
  * Do *NOT* display any of the above information
  * if the user enters a value that is not of the number data type.
@@ -170,3 +170,50 @@ alert("Your total bill today after lucky number discount is $" + calculateTotal(
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+
+function evenOrOdd(num) {
+    if (num % 2 === 0) {
+        alert("Your number is even!");
+    } else {
+        alert("Your number is odd!")
+    }
+}
+
+
+
+function numPlusHundred(num) {
+    alert(num + 100);
+}
+
+function negativeOrPositive(num) {
+    if (num < 0) {
+        alert("Your number is negative!");
+    } else {
+        alert("Your number is positive!");
+    }
+}
+
+
+
+const wouldYouLikeToEnter = confirm("Would you like to enter a number");
+
+
+if (wouldYouLikeToEnter === true) {
+    let usersNum = Number(prompt("Please enter your number."));
+        if (isNaN(usersNum)) {
+            alert("Please enter a valid number");
+        } else if (!isNaN(usersNum)) {
+            evenOrOdd(usersNum);
+            numPlusHundred(usersNum);
+            negativeOrPositive(usersNum);
+        }
+} else {
+    alert("Maybe come back later.");
+}
+
+
+
+
+
+
+
