@@ -93,8 +93,8 @@ function analyzeColorSwitch(color) {
  * function to show it to the user.
  */
 
-// const usersFavColor = prompt("What is your favorite color?");
-// alert(analyzeColor(usersFavColor));
+const usersFavColor = prompt("What is your favorite color?");
+alert(analyzeColor(usersFavColor));
 
 /* ########################################################################## */
 
@@ -147,9 +147,9 @@ function calculateTotal(luckyNum, total) {
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-// const luckyNumber = Math.floor(Math.random() * 6);
-// const totalBill = Number(prompt("What is your total bill today?"));
-// alert("Your total bill today after lucky number discount is $" + calculateTotal(luckyNumber, totalBill) + "!");
+const luckyNumber = Math.floor(Math.random() * 6);
+const totalBill = Number(prompt("What is your total bill today?"));
+alert("Your total bill today after lucky number discount is $" + calculateTotal(luckyNumber, totalBill) + "!");
 
 
 /**
@@ -175,11 +175,9 @@ function evenOrOdd(num) {
     if (num % 2 === 0) {
         alert("Your number is even!");
     } else {
-        alert("Your number is odd!")
+        alert("Your number is odd!");
     }
 }
-
-
 
 function numPlusHundred(num) {
     alert(num + 100);
@@ -194,10 +192,7 @@ function negativeOrPositive(num) {
 }
 
 
-
 const wouldYouLikeToEnter = confirm("Would you like to enter a number");
-
-
 if (wouldYouLikeToEnter === true) {
     let usersNum = Number(prompt("Please enter your number."));
         if (isNaN(usersNum)) {
