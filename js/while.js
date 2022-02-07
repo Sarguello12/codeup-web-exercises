@@ -11,11 +11,11 @@
 
 // Do-while loop
 let allCones = Math.floor(Math.random() * 50) + 50;
-let conesBought;
+
 
 do {
-    conesBought = Math.floor(Math.random() * 5) + 1;
-    console.log("I have " + allCones + " to sell!")
+    let conesBought = Math.floor(Math.random() * 5) + 1;
+    console.log("I have " + allCones + " to sell!");
 
     if (conesBought > allCones) {
         console.log("I cannot sell you " + conesBought + " cones, I only have " + allCones + ".");
