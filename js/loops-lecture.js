@@ -33,11 +33,26 @@ let number = 5;
 //     console.log(number);
 // }
 
-number = Math.floor(Math.random() * 6) + 1;
-let guess;
+// number = Math.floor(Math.random() * 6) + 1;
+// let guess;
+//
+// do {
+//     guess = parseInt(prompt("Enter a number between 1 and 6"));
+// } while (guess !== number);
+//
+// alert("Your guess of " + guess + " matches the number " + number + "!");
 
-do {
-    guess = parseInt(prompt("Enter a number between 1 and 6"));
-} while (guess !== number);
 
-alert("Your guess of " + guess + " matches the number " + number + "!");
+// for loop
+// for(let count = 100; count >=0; count--) {
+//     console.log(count);
+// }
+
+// typically uses a variable called i for iterator
+for(let i = 100; i >= 0; i--){
+    console.log(i);
+}
+
+for(let i = 0; i <= 100; i++){
+    console.log(i);
+}
