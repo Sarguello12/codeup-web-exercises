@@ -71,12 +71,12 @@
         return arr[1]
     }
 
-    function third(arr) {
-        return arr.length;
+    function last(arr) {
+        return arr[arr.length - 1];
     }
 
     console.log(first(numbers))
     console.log(second(numbers))
-    console.log(third(numbers))
+    console.log(last(numbers))
 
 })();
