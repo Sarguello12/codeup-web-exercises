@@ -9,9 +9,9 @@ function showMultiplicationTable(num) {
 showMultiplicationTable(2)
 
 
-function tenRandomEvenOrOdd(num) {
+function tenRandomEvenOrOdd() {
     for(let i = 1; i <= 10; i++) {
-        let randomNum = Math.floor(Math.random() * 180) + 20
+        let randomNum = Math.floor(Math.random() * 181) + 20
 
         if(randomNum % 2 === 0) {
             console.log(randomNum + " is Even")
@@ -35,11 +35,15 @@ function numberPyramid() {
 }
 numberPyramid();
 
+// or much more simple solution
 
-for(let i = 100; i >= 5; i--){
-    if (i % 5 === 0) {
+for(let i = "1"; i.length <= 9; i += "1") {
+    console.log(i * i.length);
+}
+
+
+for(let i = 100; i >= 5; i-= 5){
         console.log(i);
-    }
 }
 
 
