@@ -6,16 +6,26 @@ console.log("I have to buy " + groceryList[0]);
 console.log("My grocery list is " + groceryList);
 
 
-let peoples = ['Jen', 'Mia', 'Eric', "Amy"];
+let people = ['Jen', 'Mia', 'Eric', "Amy"];
 
-console.log(peoples[0]);
-console.log(peoples[3]);
-console.log(peoples[1] + ' is my sister!');
+console.log(people[0]);
+console.log(people[3]);
+console.log(people[1] + ' is my sister!');
 
-for (let i = 0; i < peoples.length; i++) {
-    console.log("Hello, " + peoples[i] + "!");
+for (let i = 0; i < people.length; i++) {
+    console.log("Hello, " + people[i] + "!");
 }
 
-peoples.forEach(function(people) {
-    console.log("Hello, " + people + "!");
+people.forEach(function(item) {
+    console.log("Hello, " + item + "!");
 });
+
+let cities = ["San Antonio", "Austin", "Dallas", "Houston"];
+
+for (let i = 0; i < cities.length; i++){
+    console.log(cities[i]);
+}
+
+for (let i = 0; i < cities.length; i++){
+    console.log("student " + (i + 1) + " lives in " + cities[i] + ".");
+}
