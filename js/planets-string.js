@@ -27,14 +27,11 @@
      * string, and <li> tags around each planet.
      */
 
-    let planetsBr = planetsString.replaceAll("|", "<br> ");
+    let planetsBr = planetsArray.join("<br>");
     console.log(planetsBr);
 
 
-    planetsArray.unshift("<br>");
-    planetsArray.push("</br>");
-
-    let planetList = planetsArray.join("<li>");
-    console.log(planetList);
+    let bonus = "<ul><li>" + planetsArray.join("</li><li>") + "</li></ul>";
+    document.write(bonus);
 
 })();
