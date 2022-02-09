@@ -68,3 +68,38 @@ console.log(groceryList);
 
 groceryList.sort();
 console.log(groceryList);
+
+
+let hamletQuote = "To be or not to be, that is the question";
+let noCommasQuote = hamletQuote.replace(",", "").toLowerCase();
+//separator is where the split creates the array items.
+let hamletQuoteArray = noCommasQuote.split(" ");
+console.log(hamletQuoteArray);
+
+hamletQuoteArray.reverse();
+console.log(hamletQuoteArray);
+
+
+let hamletQuoteBackwards = hamletQuoteArray.join(" ");
+console.log(hamletQuoteBackwards);
+
+let hamletQuoteWordList = hamletQuoteArray.join(",");
+console.log(hamletQuoteWordList);
+
+let originalHamlet = hamletQuoteWordList.replaceAll(',', " ");
+let hamlet = originalHamlet.split(" ");
+hamlet.reverse();
+
+let hamletQuote2 = hamlet.join(" ");
+console.log(hamletQuote2);
+
+
+
+
+
+
+
+
+
+
+
