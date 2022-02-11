@@ -50,3 +50,36 @@ function evenOrOdd(num) {
 }
 // console.log(evenOrOdd(2));
 // console.log(evenOrOdd(3));
+
+let exampleArr = ["abc", "ab", "cat", "Bay"];
+
+function removeBs(arr) {
+    return arr.join(",")
+        .replaceAll("b", "")
+        .replaceAll("B", "")
+        .split(",");
+
+    // original solution
+
+    // let strArr = arr.join(",").toLowerCase();
+    // let noBs = strArr.replaceAll("b", "");
+    // return noBs.split(",");
+}
+
+
+// console.log(removeBs(exampleArr));
+
+// Solution using loops
+function removeBsFromString(str) {
+    return str.replaceAll("b", "").replaceAll("B", "");
+}
+
+function removeThoseBs(arr) {
+    let output = [];
+    arr.forEach(function(str) {
+        output.push(removeBsFromString(str));
+    });
+    return output;
+}
+
+// console.log(removeThoseBs(exampleArr));
