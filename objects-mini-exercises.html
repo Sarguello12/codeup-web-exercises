@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Objects Mini Exercises</title>
+</head>
+<body>
+    <script>
+
+
+// Mini Exercise 1
+
+    let bev1 = {
+        brandName: "la croix",
+        type: "sparkling water",
+        volumeInOz: 12,
+        priceInDollars: 6,
+        amountPerPack: 12,
+        flavors: ["lime", "grapefruit", "lemon",],
+        isCaffeinated: false,
+        isOpen: false
+    }
+
+    let bev2 = {};
+
+    bev2.brandName = "merit coffee";
+    bev2.type = "coffee";
+    bev2.volumeInOz = 8;
+    bev2.priceInDollars = 3;
+    bev2.amountPerPack = 1;
+    bev2.flavors = ["black", "cream", "sugar"];
+    bev2.isCaffeinated = true;
+
+    let bev3 = {
+        brandName: "Yerba Mate",
+        type: "tea",
+        volumeInOz: 14,
+        priceInDollars: 4,
+        amountPerPack: 1,
+        flavors: ["blueberry", "orange"],
+        isCaffeinated: true,
+        isOpen: false
+    }
+
+
+// console.log(bev1);
+// console.log(bev2);
+// console.log(bev3);
+
+
+function popATop(object) {
+    let takeADrink = confirm("Would you like to pop a top?");
+    if (takeADrink === true && object.hasOwnProperty('isOpen')) {
+        alert("Enjoy your " + object.brandName + "!");
+        return object.isOpen = true;
+    } else {
+        return object.isOpen = false;
+    }
+}
+// popATop(bev1);
+
+
+// Mini Exercise 2
+
+let users = [
+    {
+        givenName: "Sam",
+        age: 21
+    },
+    {
+        givenName: "Cathy",
+        age: 34
+    },
+    {
+        givenName: "Karen",
+        age: 43
+    }];
+
+console.log(users[0].givenName + " " + users[1].givenName + " " + users[2].givenName);
+
+//refactored using a loop
+let message = "";
+users.forEach(function(user){
+    message += user.givenName + " ";
+});
+console.log(message);
+
+
+// users.forEach(function(user){
+//     user.givenName = "John Doe";
+// })
+// console.log(users);
+
+
+users.forEach(function(user){
+    user.age = user.age + 1;
+})
+console.log(users);
+
+
+let totalAge = 0;
+users.forEach(function(user){
+    totalAge += user.age;
+})
+console.log(totalAge);
+
+
+let averageAge = (totalAge / 3).toFixed(2);
+console.log(averageAge);
+
+
+users.forEach(function(user){
+    console.log(user.givenName);
+});
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

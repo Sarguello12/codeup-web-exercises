@@ -35,6 +35,13 @@
 
     console.log(pet);
 
+    let pet1 = {
+        givenName: "Freckles",
+        ageInYears: 4,
+        species: "Dog"
+    };
+console.log(pet1);
+
 // create a pet object that has the following properties...
 // givenName
 // age
