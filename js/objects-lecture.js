@@ -42,6 +42,28 @@
     };
 console.log(pet1);
 
+
+//assigning functionality to an object
+//function attached to an object is called a method
+let user = {
+    givenName: "Sam",
+    age: 24,
+    sayHello: function() {
+        console.log("Howdy!");
+    },
+    logAge: function() {
+        console.log(this.age);
+    },
+    addProp: function(name, value) {
+        this.name = value;
+    }
+}
+
+user.sayHello();
+user.logAge();
+
+user.addProp('username', 'sarguello')
+console.log(user);
 // create a pet object that has the following properties...
 // givenName
 // age
