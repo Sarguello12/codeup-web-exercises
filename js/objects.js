@@ -130,8 +130,21 @@ let person = {
     books.forEach(function(book){
         let bookIndex = books.indexOf(book) + 1;
 
-        console.log("Book #" + bookIndex + " Title: " + book.title + " Author: " + book.author.firstName + " " + book.author.lastName);
+        console.log("Book #" + bookIndex + "\n" +
+            "Title: " + book.title + "\n" + "Author: " +
+            book.author.firstName + " " +
+            book.author.lastName + "\n" + "---");
     })
+
+    // for loop version
+
+    // for (let i = 0; i < books.length; i++) {
+    //     let bookMsg = 'Book # ' +(i + 1) + '\n' +
+    //         'Title: ' + book[i].title + '\n' +
+    //         'Author: ' + books[i].author.firstName + ' ' +
+    //         books[i].author.lastName + '\n' + '---';
+    //     console.log(bookMsg);
+    // }
 
 
     /**
