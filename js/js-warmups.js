@@ -83,3 +83,19 @@ function removeThoseBs(arr) {
 }
 
 // console.log(removeThoseBs(exampleArr));
+
+let user = {
+    userName: 'jbomb',
+    email: 'john@email.com',
+    isAdmin: true
+}
+
+function createUserMessage(obj){
+    if(obj.isAdmin === true) {
+        console.log('User ' + obj.userName + ' is an admin and can be reached at ' + obj.email);
+    } else {
+        console.log('User ' + obj.userName + ' is not an admin and can be reached at ' + obj.email);
+    }
+}
+
+// createUserMessage(user);
