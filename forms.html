@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register With Us</title>
+</head>
+<body>
+
+    <form method="post" action="https://request-inspector.glitch.me/">
+        <fieldset>
+            <legend>Personal Info</legend>
+                <label for="email">Email:</label>
+                <input type="text" name="email" id="email">
+                <label for="password">Password:</label>
+                <input type="text" name="password" id="password">
+                <br>
+                <br>
+                <label for="bio">Bio:</label>
+                <br>
+                <textarea name="bio" id="bio" cols="48" rows="10"></textarea>
+                <br>
+                <br>
+        </fieldset>
+        <fieldset>
+            <legend>Additional Info</legend>
+                <h4>How did you hear about us?</h4>
+                <label for="billboard">Billboard:</label>
+                <input type="radio" name="howDidYouHear" id="billboard" value="billboard">
+                <label for="radio">Radio Ad:</label>
+                <input type="radio" name="howDidYouHear" id="radio" value="radio">
+                <label for="internet">Internet Ad:</label>
+                <input type="radio" name="howDidYouHear" id="internet" value="internet">
+                <label for="other">Other:</label>
+                <input type="radio" name="howDidYouHear" id="other" value="other">
+                <br>
+                <br>
+                <label for="browser">What browser are you currently using?</label>
+                <select name="browser" id="browser">
+                <option value="chrome">Chrome</option>
+                <option value="firefox">FireFox</option>
+                <option value="safari">Safari</option>
+                <option value="internet explorer">Internet Explorer</option>
+                <option value="other">Other</option>
+                </select>
+        </fieldset>
+        <br>
+        <input type="submit">
+        <br>
+        <br>
+        <input type="reset">
+    </form>
+
+</body>
+</html>
