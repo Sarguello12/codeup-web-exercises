@@ -99,3 +99,17 @@ function createUserMessage(obj){
 }
 
 // createUserMessage(user);
+
+function areaOrPerimeter(l, w) {
+    if(l === w){
+        return "area of the square is " + l * w;
+    }
+    if(l !== w){
+        return "area of the rectangle is " + w * l;
+    }
+
+}
+
+// console.log(areaOrPerimeter(3, 3))
+// console.log(areaOrPerimeter(3, 5))
+
