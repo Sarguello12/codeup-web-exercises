@@ -1,3 +1,62 @@
 .fancy-header {
-    color: purple;
+    text-align: center;
+    font-size: 250%;
+    font-family: 'Oswald', sans-serif;
+}
+
+header {
+    color: chartreuse;
+    background-color: darkcyan;
+    padding: 2%
+}
+
+
+h2 {
+    color: black;
+    text-decoration: underline;
+    font-size: 2em;
+}
+
+body {
+    background-color: lightgray;
+    /*background: url(../img/pexels-alex-conchillos-3745234-1.jpg);*/
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+}
+
+p {
+    font-size: 100%;
+}
+
+
+ul.checkmark {
+    list-style-type:none;
+}
+ul.checkmark li:before {
+    content:"\2713\0020";
+}
+
+table, th, td {
+    border: 1px solid;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gallery {
+    background-color: darkcyan;
+    padding-bottom: 5em;
+}
+
+.gallery h2 {
+    color: chartreuse;
+}
+
+a:hover {
+    font-size: 300%;
+    background-color: darkcyan;
+    color: chartreuse;
+    font-family: 'Shizuru', cursive;
 }
