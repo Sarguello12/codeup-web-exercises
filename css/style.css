@@ -2,6 +2,7 @@
     text-align: center;
     font-size: 250%;
     font-family: 'Oswald', sans-serif;
+    filter: drop-shadow(10px 10px 10px greenyellow);
 }
 
 header {
@@ -24,8 +25,23 @@ body {
     font-family: 'Oswald', sans-serif;
 }
 
+.background1{
+    background-image: url(../img/pexels-alex-conchillos-3745234-1.jpg);
+}
+
+.background2{
+    background-color: lightgray;
+    margin-left: 35%;
+    margin-right: 35%;
+    text-align: center;
+}
+
 p {
     font-size: 100%;
+}
+
+img {
+    width: 40%;
 }
 
 
