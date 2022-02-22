@@ -112,3 +112,21 @@ function areaOrPerimeter(l, w) {
 
 // console.log(areaOrPerimeter(3, 3))
 // console.log(areaOrPerimeter(3, 5))
+
+
+let firstNames = ["CJ", "Max", "Claude", "Meowmeow"];
+let lastNames = ["Cat", "Feline", "Kitten", "Calico"];
+
+function createNames(firstNames, lastNames){
+    let fullNames = [];
+    let catName;
+
+    for(let i = 0; i < firstNames.length; i++){
+        for(let j = 0; j < lastNames.length; j++){
+            catName = {firstName: firstNames[i], lastName: lastNames[i]};
+        }
+        fullNames.push(catName);
+    }
+    return fullNames;
+}
+// console.log(createNames(firstNames, lastNames));
