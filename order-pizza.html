@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Pizza</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<body>
+
+<!--navbar-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand">Pizza World</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item me-2">
+                    <a class="nav-link active" aria-current="page" href="#">Order Online</a>
+                </li>
+                <li class="nav-item me-3">
+                    <a class="nav-link" href="#">Menu</a>
+                </li>
+                <li>
+                    <form class="d-flex ">
+                        <input class="form-control me-2 " type="search" placeholder="Zip code" aria-label="Search">
+                        <button class="btn btn-outline-secondary text-nowrap" type="submit">Search stores near you!</button>
+                    </form>
+                </li>
+            </ul>
+            <i class="material-icons">person</i>
+            <span class="navbar-text">Sign Up</span>
+        </div>
+    </div>
+</nav>
+
+
+<!--pizza header-->
+<div class="container-fluid px-0 py-5 text-center" style="background-image: url('img/pizza.png')">
+        <h1 class="display-2 bg-light bg-opacity-75">Welcome to Pizza World!</h1>
+</div>
+
+<h2 class="p-5">Build your own pizza!</h2>
+
+<!--pizza tabs-->
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Size and Crust</button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Cheese and Sauce</button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Toppings</button>
+    </li>
+</ul>
+
+<!--pizza cards-->
+
+<!--size and crust card-->
+<div class="tab-content" id="myTabContent" style="width: 100%">
+    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+        <div class="card">
+            <div class="card-header bg-primary text-white p-3">Choose size and crust</div>
+            <div class="card-body p-5">
+                <div class="card">
+                    <div class="card-header">Hand Tossed</div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Garlic seasoned crust with a rich, buttery taste.</li>
+
+                        <li class="list-group-item">
+                            <input class="form-check-input" type="radio" name="pizza_size_hand_tossed" id="small_hand_tossed">
+                            <label class="form-check-label" for="small_hand_tossed">Small (10")</label>
+                        </li>
+
+                        <li class="list-group-item">
+                            <input class="form-check-input" type="radio" name="pizza_size_hand_tossed" id="medium_hand_tossed">
+                            <label class="form-check-label" for="medium_hand_tossed">Medium (12")</label>
+                        </li>
+                    </ul>
+                </div>
+                <br>
+                <div class="card">
+                    <div class="card-header">Crispy Thin</div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Thin enough for optimum crispy to crunchy ratio.</li>
+
+                        <li class="list-group-item">
+                            <input class="form-check-input" type="radio" name="pizza_size_thin" id="medium_thin">
+                            <label class="form-check-label" for="medium_thin">Medium (12")</label>
+                        </li>
+
+                        <li class="list-group-item">
+                            <input class="form-check-input" type="radio" name="pizza_size_thin" id="large_thin">
+                            <label class="form-check-label" for="large_thin">Large (14")</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-footer p-3">Choose size and crust
+                <button type="button" class="btn btn-primary float-end">Next Step ></button>
+            </div>
+        </div>
+    </div>
+
+<!--cheese and sauce card    -->
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        <div class="card">
+            <div class="card-header bg-primary text-white p-3">Choose Cheese and Sauce</div>
+            <div class="card-body p-5">
+                <div class="card">
+                    <div class="card-header">Cheese</div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">How much?</li>
+                                <li class="list-group-item">
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option value="1" selected>Normal</option>
+                                        <option value="2">light</option>
+                                        <option value="3">Extra</option>
+                                    </select>
+                                </li>
+                        </ul>
+                    </div>
+                    <br>
+                    <div class="card">
+                        <div class="card-header">Sauce</div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">What Type?</li>
+                                <li class="list-group-item">
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option value="1" selected>Marinara</option>
+                                        <option value="2">Spicy Marinara</option>
+                                        <option value="3">White</option>
+                                        <option value="4">BBQ</option>
+                                    </select>
+                                </li>
+                                <li class="list-group-item">How much?</li>
+                                <li class="list-group-item">
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option value="1" selected>Normal</option>
+                                        <option value="2">light</option>
+                                        <option value="3">Extra</option>
+                                    </select>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-footer p-3">
+                <button type="button" class="btn btn-primary">< Previous Step</button>
+                <button type="button" class="btn btn-primary float-end">Next Step ></button>
+            </div>
+        </div>
+    </div>
+
+<!--toppings card    -->
+    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+        <div class="card">
+            <div class="card-header bg-primary text-white p-3">Choose Toppings</div>
+            <div class="card-body p-5">
+                <div class="card">
+                    <div class="card-header">Choose Meats</div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="pepperoni">
+                        <label class="form-check-label" for="pepperoni">Pepperoni</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="sausage">
+                        <label class="form-check-label" for="sausage">Sausage</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="hamburger">
+                        <label class="form-check-label" for="hamburger">Hamburger</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="fake_meat">
+                        <label class="form-check-label" for="fake_meat">Beyond Meat</label>
+                    </div>
+                </div>
+                <br>
+                <div class="card">
+                    <div class="card-header">Choose Non-Meats</div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="onion">
+                        <label class="form-check-label" for="onion">Onion</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="sport_peppers">
+                        <label class="form-check-label" for="sport_peppers">Sport Peppers</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="black_olives">
+                        <label class="form-check-label" for="black_olives">Black Olives</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="jalapeno">
+                        <label class="form-check-label" for="jalapeno">Jalapeno</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="mushrooms">
+                        <label class="form-check-label" for="mushrooms">Mushrooms</label>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer p-3">
+                <button type="button" class="btn btn-primary">< Previous Step</button>
+                <button type="button" class="btn btn-primary float-end">Place your Order!</button>
+            </div>
+        </div>
+    </div>
+
+<!--DO NOT DELETE THIS TAG-->
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
