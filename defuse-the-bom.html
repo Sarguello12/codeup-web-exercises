@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="utf-8">
     <title>Defuse the BOM</title>
@@ -16,22 +16,22 @@
     var detonationTimer = 5;
 
     // TODO: This function needs to be called once every second
-    let countDownTimer = setInterval(function updateTimer() {
+    let bombTimer = setInterval(function updateTimer() {
         if (detonationTimer === 0) {
             alert('EXTERMINATE!');
-            document.body.innerHTML = ' ';
+            document.body.innerHTML = '';
         } else if (detonationTimer > 0) {
             document.getElementById('timer').innerHTML = detonationTimer;
         }
 
         detonationTimer--;
-    }, 1000);
+    }, 1000)
 
     // TODO: When this function runs, it needs to
     // cancel the interval/timeout for updateTimer()
     function defuseTheBOM() {
-        clearInterval(countDownTimer);
-        alert('You defused the bomb in time!')
+        clearInterval(bombTimer);
+        alert("You defused the bomb just in time!");
     }
 
     // Don't modify anything below this line!
