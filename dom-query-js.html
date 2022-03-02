@@ -7,6 +7,7 @@
 <body>
 
 <h1 id="main-header">Hello World!</h1>
+<button class="button-1">Click to reveal a hidden message</button>
 <ul>
     <li data-dbid="1">Item 1</li>
     <li data-dbid="2">Item 2</li>
@@ -14,7 +15,9 @@
     <li data-dbid="4">Item 4</li>
     <li data-dbid="5">Item 5</li>
 </ul>
+<button class="button-2">Change those colors</button>
 <h2 id="sub-header">Hello Again.</h2>
+<button class="button-3">Heard you like changing colors</button>
 <p class="sub-paragraph">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
     eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -24,39 +27,103 @@
     pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
-
+<button class="button-4">See how you did</button>
+<br>
+<br>
+<button class="reset-button">Reset</button>
 <script>
     (function() {
         "use strict";
         // TODO: Uncomment next line and get the main header element by id
-        var mainHeader = document.querySelector("#main-header");
+        // var mainHeader = document.querySelector("#main-header");
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-        mainHeader.innerHTML = " JavaScript is Cool";
+        // mainHeader.innerHTML = " JavaScript is Cool";
 
         // TODO: Uncomment the next line and get the sub header element by id
-        var subHeader = document.querySelector("#sub-header");
+        // var subHeader = document.querySelector("#sub-header");
 
         // TODO: Set the text color of subHeader to blue
-        subHeader.style.color = "blue";
+        // subHeader.style.color = "blue";
         // TODO: Uncomment the next line and get all list items
-        var listItems = document.querySelectorAll("li");
+        // var listItems = document.querySelectorAll("li");
 
         // TODO: Set text color on every other list item to grey
         // TODO: Set text color of li with dbid = 1 to blue
+        //
+        // for (let i = 0; i < listItems.length; i+=2){
+        //     listItems[i].style.color = "grey"
+        // }
+        //
+        // listItems[0].style.color = "blue";
 
+        // TODO: Uncomment the next line and get all elements with class name sub-paragraph
+        // var subParagraphs = document.querySelector(".sub-paragraph");
+
+        // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
+        // subParagraphs.innerText = "Mission Accomplished!"
+    })();
+
+    // first button
+    let firstButton = document.querySelector(".button-1");
+    let mainHeader = document.querySelector("#main-header");
+
+    function hiddenMessage(){
+        mainHeader.innerHTML = "JavaScript is cool!"
+    }
+    firstButton.addEventListener("click", hiddenMessage);
+
+
+    // second button
+    let secondButton = document.querySelector(".button-2");
+    let listItems = document.querySelectorAll("li");
+
+    function listDesign(){
         for (let i = 0; i < listItems.length; i+=2){
             listItems[i].style.color = "grey"
         }
 
         listItems[0].style.color = "blue";
+    }
+    secondButton.addEventListener("click", listDesign);
 
-        // TODO: Uncomment the next line and get all elements with class name sub-paragraph
-        var subParagraphs = document.querySelector(".sub-paragraph");
 
-        // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        subParagraphs.innerText = "Mission Accomplished!"
-    })();
+    // third button
+    let thirdButton = document.querySelector(".button-3");
+    let subHeader = document.querySelector("#sub-header");
+
+    function blueSubHeader(){
+        subHeader.style.color = "blue";
+    }
+    thirdButton.addEventListener("click", blueSubHeader);
+
+
+    //fourth button
+    let fourthButton = document.querySelector(".button-4")
+    let subParagraphs = document.querySelector(".sub-paragraph");
+
+    function missionComplete(){
+        subParagraphs.innerText = "Mission Accomplished!";
+    }
+    fourthButton.addEventListener("click", missionComplete);
+
+
+    // start over button
+    let resetButton = document.querySelector(".reset-button")
+
+    function resetThePage(){
+        mainHeader.innerHTML = "Hello World!";
+        subHeader.style.color = "black";
+
+        for (let i = 0; i < listItems.length; i++){
+            listItems[i].style.color = "black"
+        }
+
+        subParagraphs.innerText =     "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+
+    }
+    resetButton.addEventListener("click", resetThePage);
+
 </script>
 </body>
 </html>
