@@ -1,0 +1,25 @@
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    padding-top: 40%;
+}
+
+.display {
+    position: absolute;
+    top: 25%;
+    right: 37%;
+
+}
+
+.square {
+    height: 200px;
+    width: 200px;
+    margin: auto;
+    background-color: chartreuse;
+    border: solid 5px darkgreen;
+}
+
+
