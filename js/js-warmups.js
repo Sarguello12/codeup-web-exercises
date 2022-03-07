@@ -130,3 +130,135 @@ function createNames(firstNames, lastNames){
     return fullNames;
 }
 // console.log(createNames(firstNames, lastNames));
+
+let parcels = [{parcelNumber: 1, weight: 20}, {parcelNumber: 2, weight: 25}];
+
+function returnWeight(parcel){
+    console.log(parcel.weight);
+}
+
+
+// function totalParcelWeight(parcels){
+//     let total = 0;
+//     parcels.forEach(function(parcel){
+//         total += parcel.weight
+//     })
+//     return total;
+// }
+// console.log(totalParcelWeight(parcels));
+
+// function presentTotal(arr){
+//     let outputDiv = document.querySelector(".output");
+//     let html = " ";
+//
+//     let total = 0;
+//     parcels.forEach(function(parcel){
+//         total += parcel.weight;
+//         html += "<h1>" + total + "</h1>";
+//     })
+//     outputDiv.innerHTML = html;
+// }
+//
+// presentTotal(parcels);
+
+// function changeTime(){
+//     message.innerText = "Good Afternoon";
+// }
+//
+// let message = document.querySelector("h1");
+// let button = document.querySelector("button");
+// button.addEventListener("click", changeTime);
+
+// ================================= JS WARM UP
+//
+// Consider the following array of users:
+
+    var users = [
+        {
+            username: 'fsmith',
+            email: 'fsmith@email.com',
+            numberOfLogins: 23
+        },
+        {
+            username: 'ksmith',
+            email: 'ksmith@email.com',
+            numberOfLogins: 100
+        },
+        {
+            username: 'lsmith',
+            email: 'lsmith@email.com',
+            numberOfLogins: 10
+        }
+    ];
+
+// 1. Create a function, returnFirstUser, that takes in an array of user objects and returns the first user object.
+//
+// returnFirstUser(users) should return...
+//
+// {
+//     username: 'fsmith',
+//         email: 'fsmith@email.com',
+//     numberOfLogins: 23
+// }
+
+    function returnFirstUser(users){
+        return users[0];
+    }
+// console.log(returnFirstUser(users));
+
+// 2. Create a function, returnTotalUserLogins, that takes in an array of user objects and returns the total count of logins
+// for all users.
+//
+// returnTotalUserLogins(users) should return... 133
+
+    function returnTotalUserLogins(users){
+        let total = 0;
+
+        users.forEach(function(user){
+            total += user.numberOfLogins;
+        });
+        return total;
+    }
+// console.log(returnTotalUserLogins(users));
+
+// 3. (optional bonus) create a function, returnMostFrequentUser, that takes in an array of user objects and returns the
+// user object with the highest number of logins.
+//
+//
+// returnMostFrequentUser(users) should return...
+//
+// {
+//     username: 'ksmith',
+//         email: 'ksmith@email.com',
+//     numberOfLogins: 100
+// }
+
+    function returnMostFrequentUser(users){
+        let mostFrequentUser = users.sort((a, b) => b.numberOfLogins - a.numberOfLogins);
+        return mostFrequentUser[0];
+    }
+
+    // alternate solution using a loop
+
+    // function returnMostFrequentUser(users){
+    //     let mostFrequentUser = {
+    //         numberOfLogins: 0
+    //     };
+    //     users.forEach(function(user){
+    //         if(user.numberOfLogins > mostFrequentUser.numberOfLogins){
+    //             mostFrequentUser = user;
+    //         }
+    //     });
+    //     return mostFrequentUser;
+    // }
+
+// console.log(returnMostFrequentUser(users));
+
+
+
+
+
+
+
+
+
