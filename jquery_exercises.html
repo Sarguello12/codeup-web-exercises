@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Exercises</title>
+</head>
+<body>
+    <h1>JQuery Exercises</h1>
+
+    <p class="codeup">Can you manipulate this using jQuery?</p>
+
+    <ul id="codeup">
+        <li>hi</li>
+        <li>hello</li>
+        <li>howdy</li>
+        <li>yo</li>
+    </ul>
+
+    <div id="hidden-h2">
+        <h2>Im in a div</h2>
+    </div>
+
+    <ol class="best-fish">
+        <li class="codeup">Carp</li>
+        <li>Bass</li>
+        <li>Trout</li>
+    </ol>
+
+    <h3 id="down-here">all the way down here</h3>
+
+
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+
+    <script>
+
+        $(document).ready(function(){
+            // alert(jQuery);
+            //
+            // $("h1").click(function(){
+            //     $("h1").html("Hello, world!")
+            //             .css("color", "chartreuse");
+            // })
+
+            // alert($("#down-here").text());
+
+            // $(".codeup").css("border", "1px solid red");
+
+            $("li").css("font-size", "20px");
+            $("h1, p, li").css("background-color", "chartreuse");
+
+            alert($("h1").text());
+
+
+
+
+        });
+
+
+
+
+
+    </script>
+
+</body>
+</html>
