@@ -35,7 +35,7 @@
 
         $(document).ready(function(){
             // alert(jQuery);
-            //
+
             // $("h1").click(function(){
             //     $("h1").html("Hello, world!")
             //             .css("color", "chartreuse");
@@ -45,21 +45,33 @@
 
             // $(".codeup").css("border", "1px solid red");
             // // $(".codeup:first").removeClass("codeup")
-            //
+
             // $("li").css("font-size", "20px");
             // $("h1, p, li").css("background-color", "chartreuse");
-            //
+
             // alert($("h1").text());
-            //
+
             // let h1Elements = $("h1");
-            //
+
             // function getH1Elements(index, element){
             //     alert(index + $(element).html())
             // }
-            //
+
             // h1Elements.each(getH1Elements);
 
+            $("h1").click(function(e){
+                $(this).css("background", "chartreuse");
+            })
 
+            $("p").dblclick(function(e){
+                $(this).css("font-size", "18px");
+            })
+
+            $("li").hover(function(e){
+                $(this).css("color", "red");
+            }, function(e){
+                $(this).css("color", "black");
+            })
         });
 
 
