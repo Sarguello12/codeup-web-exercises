@@ -263,6 +263,27 @@ function returnWeight(parcel){
 // }
 //
 // Example 1...
+
+// function computeOperations(operations, startingInt){
+//         let total = startingInt;
+//
+//         for(let i=0; i < operations.length; i++){
+//             if(operations[i].operation === "add"){
+//             total += operations[i].integer;
+//             }
+//             if(operations[i].operation === "subtract"){
+//                 total -= operations[i].integer;
+//             }
+//             if(operations[i].operation === "multiply"){
+//                 total *= operations[i].integer;
+//             }
+//             if(operations[i].operation === "divide"){
+//                 total /= operations[i].integer;
+//             }
+//         }
+//         return total;
+// }
+
 //
 // function computeOperations(operations, startingInt){
 //     let total = startingInt;
