@@ -107,7 +107,6 @@ function areaOrPerimeter(l, w) {
     if(l !== w){
         return "area of the rectangle is " + w * l;
     }
-
 }
 
 // console.log(areaOrPerimeter(3, 3))
@@ -253,6 +252,125 @@ function returnWeight(parcel){
     // }
 
 // console.log(returnMostFrequentUser(users));
+
+// ================================= WARM UP
+//
+// Create a function, computeOperations, that takes in an array of operation objects and a starting integer value and returns an integer after all the calculations have completed, using the second integer argument as the first operand. Each operation object will have the following shape:
+//
+// {
+//     operation: 'subtract' (or 'multiply' or 'add'),
+//     integer: 7 (or any positive or negative integer)
+// }
+//
+// Example 1...
+//
+// function computeOperations(operations, startingInt){
+//     let total = startingInt;
+//
+//     operations.forEach(function(operation){
+//         if(operation.operation === "add"){
+//             total += operation.integer;
+//         }
+//         if(operation.operation === "subtract"){
+//             total -= operation.integer;
+//         }
+//         if(operation.operation === "multiply"){
+//             total *= operation.integer;
+//         }
+//         if(operation.operation === "divide"){
+//             total /= operation.integer;
+//         }
+//     })
+//     return total;
+// }
+
+function computeOperations(operations, startingInt){
+    let total = startingInt;
+
+    operations.forEach(function(operation){
+        switch(operation.operation){
+            case "add":
+                total += operation.integer;
+                break;
+            case "subtract":
+                total -= operation.integer;
+                break;
+            case "multiply":
+                total *= operation.integer;
+                break;
+            case "divide":
+                total /= operation.integer;
+                break;
+        }
+    })
+    return total;
+}
+
+
+var operations1 = [
+
+    {
+        operation: 'add',
+        integer: 7
+    },
+    {
+        operation: 'add',
+        integer: 3
+    }
+]
+
+console.log(computeOperations(operations1, 10));
+
+//
+//
+// computeOperations(operations1, 10) // returns 20
+//
+//
+// Example 2...
+//
+var operations2 = [
+
+    {
+        operation: 'add',
+        integer: 7
+    },
+    {
+        operation: 'add',
+        integer: 3
+    },
+    {
+        operation: 'multiply',
+        integer: 3
+    },
+]
+
+console.log(computeOperations(operations2, 10));
+
+//
+// computeOperations(operations2, 10) // returns 60
+//
+//
+// Example 3...
+//
+var operations3 = [
+
+    {
+        operation: 'subtract',
+        integer: 5
+    },
+    {
+        operation: 'multiply',
+        integer: -2
+    },
+    {
+        operation: 'add',
+        integer: 10
+    },
+]
+
+console.log(computeOperations(operations3, 10));
+//
+// computeOperations(operations3, 10) // returns 0
 
 
 
