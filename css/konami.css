@@ -1,0 +1,26 @@
+h1{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 70px!important;
+    color: whitesmoke;
+}
+
+h3 {
+    font-family: 'Permanent Marker', cursive;
+    color: whitesmoke;
+}
+
+p, button, div {
+    font-family: 'Syne Mono', monospace;
+}
+
+body {
+    background-image: url('/img/pexels-archie-binamira-2463358.jpg');
+}
+
+.child-container {
+    background-color: darkolivegreen;
+}
+
+.text-box {
+    color: whitesmoke;
+}
