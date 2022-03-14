@@ -38,18 +38,18 @@
         //
         // In this file, create a Mapbox map that shows your home town. After 5 seconds, have the map automatically change to a map of the entire United States using a satellite style.
 
-        // const map = new mapboxgl.Map({
-        //     container: 'map', // container ID
-        //     style: 'mapbox://styles/mapbox/streets-v11', // style URL
-        //     center: [-88.0111746, 41.8089191], // starting position [lng, lat]
-        //     zoom: 12 // starting zoom
-        // });
-        //
-        // setTimeout(function(){
-        //     map.setCenter([-98.5795, 39.828175]);
-        //     map.setZoom(3);
-        //     map.setStyle('mapbox://styles/mapbox/satellite-v9');
-        // }, 5000)
+        const map = new mapboxgl.Map({
+            container: 'map', // container ID
+            style: 'mapbox://styles/mapbox/streets-v11', // style URL
+            center: [-88.0111746, 41.8089191], // starting position [lng, lat]
+            zoom: 12 // starting zoom
+        });
+
+        setTimeout(function(){
+            map.setCenter([-98.5795, 39.828175]);
+            map.setZoom(3);
+            map.setStyle('mapbox://styles/mapbox/satellite-v9');
+        }, 5000)
 
 
     </script>
