@@ -54,6 +54,7 @@ $("button").click(function() {
 // creates the weather tables based on location
             }).done(function(data) {
                 $("#forecast").html(createWeatherTables(data));
+                displayCityData(marker._lngLat.lat, marker._lngLat.lng);
             });
         });
 });
@@ -74,11 +75,11 @@ $("button").click(function() {
             let date = new Date(data.daily[i].dt * 1000).toDateString();
 
             html += `<div class="weather-cards">
-                            <h5>${date}</h5>
+                            <h5 id="date">${date}</h5>
                             <img src="http://openweathermap.org/img/w/${data.daily[i].weather[0].icon}.png">
-                            <p>Feels like: ${data.daily[i].feels_like.day}</p>
-                            <p>High: ${data.daily[i].temp.max}</p>
-                            <p>Low: ${data.daily[i].temp.min}</p>
+                            <p id="temp">${data.daily[i].feels_like.day}&#176</p>
+                            <p>High: ${data.daily[i].temp.max}&#176</p>
+                            <p>Low: ${data.daily[i].temp.min}&#176</p>
                     </div>`
         }
         return html;
@@ -105,15 +106,13 @@ marker.on("dragend", function(){
 
     }).done(function(data) {
         $("#forecast").html(createWeatherTables(data));
+        displayCityData(marker._lngLat.lat, marker._lngLat.lng);
     })
 })
 
 
 function displayCityData(lat, lng){
-
     reverseGeocode({lat, lng}, MAPBOX_API_TOKEN).then(function(results) {
         $("#current-city").html(results)
     })
 }
-
-displayCityData(29.423017,-98.48527)

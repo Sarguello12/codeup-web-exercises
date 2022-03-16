@@ -10,18 +10,22 @@
 
 </head>
 <body>
-    <header>
-        <h3>Weather App</h3>
-        <p>Current City: <span id="current-city">San Antonio</span></p>
-    </header>
-
-    <div class="ms-2 my-4">
-        <label for="location">Place:</label>
-        <input placeholder="Enter a place" id="location">
-        <button class="btn-primary rounded">Search</button>
-    </div>
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <div class="navbar-brand">
+                <h3>Weather App</h3>
+                <p>Current Location: <span id="current-city">San Antonio</span></p>
+            </div>
+            <div>
+                <input placeholder="Enter a place" id="location" autocomplete="off">
+                <button class="btn-primary rounded">Search</button>
+            </div>
+        </div>
+    </nav>
 
     <section>
+
+            <h1 class="text-center py-4">5 Day forecast</h1>
 
 <!--        contains output of the weather api-->
         <div id="forecast" class="d-flex justify-content-evenly my-5">
