@@ -519,3 +519,11 @@ function createFirstNamesArray(users){
 }
 
 // console.log(createFirstNamesArray(users), ['Bob', 'Sally', 'Fred', 'Cathy', 'Joe'])
+
+$("#change-color").click(function(){
+    $("#square").css("background", "lime");
+})
+
+$("#reset").click(function(){
+    window.location.reload();
+})
