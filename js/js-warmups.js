@@ -528,8 +528,22 @@ function createFirstNamesArray(users){
 //     window.location.reload();
 // })
 
-$(".square").hover(function(){
-    $(this).css("background", ($(this).data("color")));
-}, function(){
-    $(this).css("background", "");
+// $(".square").hover(function(){
+//     $(this).css("background", ($(this).data("color")));
+// }, function(){
+//     $(this).css("background", "");
+// })
+
+// JQuery solution
+$(".square").click(function() {
+    $(this).toggleClass("yellow")
 })
+
+// vanilla js solution
+const changingColors = document.querySelectorAll("#changingColors .square");
+
+function toggleColor(e){
+    e.target.style.backgroundColor === "" ? e.target.style.backgroundColor = "yellow" : e.target.style.backgroundColor = "";
+}
+
+changingColors.forEach(square => square.addEventListener("click", toggleColor));

@@ -11,11 +11,26 @@
 <!--            background: grey;-->
 <!--        }-->
 <!--    </style>-->
+<!--    <style>-->
+<!--        .square {-->
+<!--            width: 200px;-->
+<!--            height: 200px;-->
+<!--            border: 1px solid black;-->
+<!--        }-->
+<!--    </style>-->
     <style>
+        #square {
+            width: 200px;
+            height: 200px;
+            background-color: gray;
+        }
         .square {
             width: 200px;
             height: 200px;
             border: 1px solid black;
+        }
+        .yellow {
+            background-color: yellow;
         }
     </style>
 </head>
@@ -27,9 +42,17 @@
 
 <!--    <button id="change-color">Change Color</button>-->
 <!--    <button id="reset">Reset Page</button>-->
-<div class="square" data-color="blue"></div>
-<div class="square" data-color="red"></div>
-<div class="square" data-color="green"></div>
+<!--<div class="square" data-color="blue"></div>-->
+<!--<div class="square" data-color="red"></div>-->
+<!--<div class="square" data-color="green"></div>-->
+
+<div id="changingColors">
+    <h2>The squares that change colors</h2>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+</div>
 
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
