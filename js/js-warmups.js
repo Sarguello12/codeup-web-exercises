@@ -547,3 +547,46 @@ function toggleColor(e){
 }
 
 changingColors.forEach(square => square.addEventListener("click", toggleColor));
+
+// ================================= WARM UP
+// Create a function, encodeStr, that takes in a string and returns the string of characters with the following substitutions:
+// ‘a’ or ‘A’ becomes ‘@’
+// ‘i’ or ‘I’ becomes ‘1’
+// ‘s’ or ‘S’ becomse ‘$’
+// encodeStr(‘apple’) // returns ‘@pple’
+// encodeStr(‘codeup’) // returns ‘codeup’
+// encodeStr(‘SASS’) // returns ‘$@$$’
+// encodeStr(‘bike’) // returns ‘b1ke’
+
+// first solution with the replaceAll method
+// function encodeStr(str){
+//     return str.replaceAll("a", "@")
+//         .replaceAll("A", "@")
+//         .replaceAll("i", "1")
+//         .replaceAll("I", "1")
+//         .replaceAll("s", "$")
+//         .replaceAll("S", "$");
+// }
+
+// second solution with the map function
+function encodeStr(str){
+    return str.split("").map(char => {
+        if (char.toLowerCase() === "a"){
+            return "@";
+        }
+        else if (char.toLowerCase() === "i"){
+            return "1";
+        }
+        else if (char.toLowerCase() === "s"){
+            return "$";
+        }
+        else {
+            return char;
+        }
+    }).join("")
+}
+
+console.log(encodeStr("apple"), "@pple"); // returns ‘@pple’
+console.log(encodeStr("codeup"), "codeup"); // returns ‘codeup’
+console.log(encodeStr("SASS"), "$@$$"); // returns ‘$@$$’
+console.log(encodeStr("bike"), "b1ke"); // returns ‘b1ke’
