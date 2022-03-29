@@ -586,7 +586,74 @@ function encodeStr(str){
     }).join("")
 }
 
-console.log(encodeStr("apple"), "@pple"); // returns ‘@pple’
-console.log(encodeStr("codeup"), "codeup"); // returns ‘codeup’
-console.log(encodeStr("SASS"), "$@$$"); // returns ‘$@$$’
-console.log(encodeStr("bike"), "b1ke"); // returns ‘b1ke’
+// console.log(encodeStr("apple"), "@pple"); // returns ‘@pple’
+// console.log(encodeStr("codeup"), "codeup"); // returns ‘codeup’
+// console.log(encodeStr("SASS"), "$@$$"); // returns ‘$@$$’
+// console.log(encodeStr("bike"), "b1ke"); // returns ‘b1ke’
+
+// ================================= WARM UP
+//
+// Write a function, returnMostCommonVowel, that takes in a string and returns the most common vowel in the string.
+// Assume the characters in the string are all lowercase and only 'a' 'e' 'i' 'o' 'u' count as vowels. Return the most common vowel from the string.
+//
+// If the highest vowel count is shared between multiple vowels, return the first vowel alphabetically. (2 'a's and 2 'e's should 'a')
+//
+// If no vowels are in the string return false.
+
+
+function mostVowels(str){
+    const vowels = [
+        {
+            vowel: "a",
+            count: 0
+        },
+        {
+            vowel: "e",
+            count: 0
+        },
+        {
+            vowel: "i",
+            count: 0
+        },
+        {
+            vowel: "o",
+            count: 0
+        },
+        {
+            vowel: "u",
+            count: 0
+        }
+    ];
+
+    const newStr = str.split("")
+
+    newStr.forEach(function(char){
+        if(char.toLowerCase() === "a"){
+           return vowels[0].count++;
+        } else if(char.toLowerCase() === "e"){
+            return vowels[1].count++;
+        } else if(char.toLowerCase() === "i"){
+            return vowels[2].count++;
+        } else if(char.toLowerCase() === "o"){
+            return vowels[3].count++;
+        } else if(char.toLowerCase() === "u"){
+            return vowels[4].count++;
+        }
+    })
+
+    let mostUsedVowel = vowels.sort((a, b) => b.count - a.count);
+
+    if (mostUsedVowel[0].count === 0){
+        return false;
+    } else {
+        return mostUsedVowel[0].vowel;
+    }
+}
+
+console.log(mostVowels('codeup'), "e"); // returns 'e'
+console.log(mostVowels('leetcode'), "e"); // returns 'e'
+console.log(mostVowels('banana'), "a"); // returns 'a'
+console.log(mostVowels('asdf'), "a"); // returns 'a'
+console.log(mostVowels('nnnn'), false); // returns false
+console.log(mostVowels('hello'), "e"); // returns 'e'
+console.log(mostVowels('needful'), "e"); // returns 'e'
