@@ -650,10 +650,60 @@ function mostVowels(str){
     }
 }
 
-console.log(mostVowels('codeup'), "e"); // returns 'e'
-console.log(mostVowels('leetcode'), "e"); // returns 'e'
-console.log(mostVowels('banana'), "a"); // returns 'a'
-console.log(mostVowels('asdf'), "a"); // returns 'a'
-console.log(mostVowels('nnnn'), false); // returns false
-console.log(mostVowels('hello'), "e"); // returns 'e'
-console.log(mostVowels('needful'), "e"); // returns 'e'
+// console.log(mostVowels('codeup'), "e"); // returns 'e'
+// console.log(mostVowels('leetcode'), "e"); // returns 'e'
+// console.log(mostVowels('banana'), "a"); // returns 'a'
+// console.log(mostVowels('asdf'), "a"); // returns 'a'
+// console.log(mostVowels('nnnn'), false); // returns false
+// console.log(mostVowels('hello'), "e"); // returns 'e'
+// console.log(mostVowels('needful'), "e"); // returns 'e'
+
+// ================================= WARM UP
+//
+// Create a function, returnAvgAdminSalary, that takes in an array of users and returns the average salary of all admins. Round to the nearest dollar.
+
+
+const staff = [
+    {
+        name: 'Fred',
+        isAdmin: true,
+        salary: 20000
+    },
+    {
+        name: 'Cathy',
+        isAdmin: false,
+        salary: 40000
+    },
+    {
+        name: 'Sally',
+        isAdmin: true,
+        salary: 80000
+    },
+    {
+        name: 'Kyle',
+        isAdmin: true,
+        salary: 50000
+    },
+    {
+        name: 'Cynthia',
+        isAdmin: false,
+        salary: 100000
+    }
+];
+
+
+function returnAvgAdminSalary(users){
+    let sum = 0;
+    let total = 0;
+
+    users.forEach(function(user){
+        if(user.isAdmin === true) {
+            sum += user.salary;
+            total++
+        }
+    })
+    return sum / total;
+}
+
+
+console.log(returnAvgAdminSalary(staff), 116666); // returns 116666
